@@ -1,0 +1,41 @@
+<script type="text/x-handlebars" data-template-name="calendar">
+<div class="calendar">
+<div class="currentTimeBar"></div>
+{{#each view.cal.displayedEvents}}
+<div class="event">
+<h2>{{title}}</h2>
+
+{{#if where}}
+<h3>At {{where}}</h3>
+{{/if}}
+
+<h3>Starts {{start}} ({{startHuman}})</h3>
+<h3>Ends {{end}}</h3>
+</div>
+{{/each}}
+</div>
+</script>
+
+
+<script type="text/x-handlebars" data-template-name="weather">
+
+<div class="weatherHolder">
+	{{#with view.weather.weatherToday}}
+		<div class="weatherToday">
+			<div class="weatherTextHolder">
+				<h2>{{longWeather}} : {{temp}}&#176;</h2>
+				<h3><span class="high">{{high}}</span>/<span class="low">{{low}}</span></h3>
+			</div>
+				<img {{bind-attr src=src}}/>
+		</div>
+	{{/with}}
+	<div class="weatherFutureHolder">
+		{{#each view.weather.weatherFuture}}
+			<div class="weatherFuture">
+				<img {{bind-attr src=src}}/>
+				<h3><span class="high">{{temp}}&#176;</span></h3>
+			</div>
+		{{/each}}
+	</div>
+</div>
+</script>
