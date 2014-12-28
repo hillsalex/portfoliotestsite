@@ -12,12 +12,11 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-
+<link href='//fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,300italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Quicksand:100,300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="styles/x3dom.css"></script>
 <link rel="stylesheet" href="styles/main.css"></script>
 
 
@@ -37,34 +36,37 @@
     <!--<div id="bodyBG" style="width:2101px;height:1284px;position:absolute;left:-130px;top:-41px"></div>-->
     <div class="bodyContainer center">
         <header>
-            <div class="arbitraryHeightRow" style="height:100%;">
-                <div class="box-1">
-                    <h1 class="brand">[rnd]</h1>
+            <div class="arbitraryHeightRow height-1 sm-height-3">
+                <div class="box-1 sm-box-7 sm-height-auto">
+                    <h1 class="brand sm-height-1">[rnd]</h1>
                 </div>
-                <div class="box-1 header-bottom-border img0"></div>
-                <div class="box-1 header-bottom-border img0"></div>
-                <div class="box-1 header-bottom-border img0"></div>
-                <div class="box-1 header-bottom-border img0"></div>
-                <div class="box-1 header-bottom-border img0"></div>
-                <div class="box-1"></div>
+                <div class="md-box-0 box-0 sm-box-7 sm-height-1"></div>
+                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0 first"></div><div class="box-0 sm-box-2"></div>
+                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0"></div><div class="box-0 sm-box-2"></div>
+                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0"></div><div class="box-0 sm-box-2"></div>
+                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0"></div><div class="box-0 sm-box-2"></div>
+                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0"></div><div class="box-0 sm-box-2"></div>
+                <div class="box-1 sm-box-0"></div>
             </div>
         </header>
         <section>
-            <div class="arbitraryHeightRow height-1">
-                <div class="box-1"></div>
-                <div class="box-2 project-title-dev">
+            <div class="arbitraryHeightRow height-1 sm-height-2">
+                <div class="box-1 sm-box-0"></div>
+                <div class="sm-box-7 md-box-5 box-2 project-title-dev sm-text-padding">
                     <div class="row100">
                         <h1>polyhedral fuck you</h1>
                         <h1 class="priceClass">$495</h1>
                     </div>
                     <div class="row100">
                         <h2>250/250 unique designs remaining</h2>
+
                     </div>
                 </div>
+                <div class="box-0 md-box-0 sm-box-7 height-1"></div>
             </div>
-            <div class="arbitraryHeightRow height-3">
-                <div class="box-1"></div>
-                <div class="box-2">
+            <div class="arbitraryHeightRow height-3 sm-height-auto">
+                <div class="box-1 sm-box-1 sm-height-1"></div>
+                <div class="box-2 sm-box-5 sm-height-5">
                     <x3d id="main3d-dev">
                         <scene>
                             <Viewpoint id="front" position="0 1 1" orientation="0 -0.2 -1" description="camera" "set_bind"="true"></Viewpoint>
@@ -72,51 +74,107 @@
                         </scene>
                     </x3d>
                 </div>
-                <div class="box-1">
-                    <div class="row100 height-1"></div>
-                    <div class="row100 height-1"></div>
+                <div class="box-0 md-box-0 sm-box-1 sm-height-1"></div>
+                <div class="box-1 sm-box-7">
                     <div class="row100 height-1">
-                        <div class="buttonHolder">
-                            <div class="bg-centerer" style="position:relative;width:0;height:0">
-                                <div class="button-bg">
-                                </div>
+
+                        <div class="row100">
+                            <div class="color-text">
+                                <h2>height</h2>
                             </div>
-                            <button id="randomizeButton" type="button" class="btn btn-primary randomizeButton" data-ui-color-change="background-color">
-                                randomize
-                            </button>
+                            <div class="color-slider">
+                                slider goes here...
+                            </div>
                         </div>
                     </div>
+                    <div class="row100 height-1">
+
+                        <div class="row100 color-ui-row">
+
+                            <div class="percent25 md-percent50 sm-percent25 color-ui">
+                                <div class="centerer">
+                                    <div class="color-ui-block selected" data-ui-color="green" data-ui-color-code="rgb(146, 151, 66)" style="background-color:rgb(146, 151, 66)"></div>
+                                </div>
+                            </div>
+
+                            <div class="percent25 md-percent50 sm-percent25 color-ui">
+                                <div class="centerer">
+                                    <div class="color-ui-block" data-ui-color="tan" data-ui-color-code="rgb(227,226,184)" style="background-color:rgb(227,226,184)"></div>
+                                </div>
+                            </div>
+                            <div class="box-0 md-box-7 sm-box-0 fl colorDivider"></div>
+                            <div class="percent25 md-percent50 sm-percent25 color-ui">
+                                <div class="centerer">
+                                    <div class="color-ui-block" data-ui-color="blue" data-ui-color-code="rgb(145,178,196)" style="background-color:rgb(145,178,196)"></div>
+                                </div>
+                            </div>
+                            <div class="percent25 md-percent50 sm-percent25 color-ui">
+                                <div class="centerer">
+                                    <div class="color-ui-block" data-ui-color="rust" data-ui-color-code="rgb(235,55,0)" style="background-color:rgb(235,55,0)"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row100 height-1"></div>
                 </div>
-                <div class="box-2">
-                    <img class="tableMainPic" />
+                <div class="box-0 sm-box-1 sm-height-1"></div>
+                <div class="box-2 sm-box-5 sm-height-5">
+                    <div class="tableMainPic "></div>
                 </div>
+            </div>
+        </section>
+        <section>
+            <div class="arbitraryHeightRow height-1 sm-height-1">
+                <div class="box-0 sm-box-7 height-0"></div>
+                <div class="box-1 sm-height-1"></div>
+                <div class="box-1 sm-box-25 sm-height-25">
+                    <div class="smallImage1"></div>
+                </div>
+                <div class="box-1 sm-box-25 sm-height-25">
+                    <div class="smallImage2"></div>
+                </div>
+                <div class="box-1 sm-height-25"></div>
+
+                <div class="box-0 sm-box-1 sm-height-1"></div>
+                <div class="box-2 sm-box-5 description-dev sm-height-5">
+                    <h3>
+                        One-of-a-kind hand made end table crafted for durability out of steel with a powdercoated finish
+                    </h3>
+                </div>
+                <div class="box-0 sm-box-1"></div>
             </div>
         </section>
         <footer>
             <div class="arbitraryHeightRow height-1">
-                <div class="box-1"></div>
-                <div class="box-1">
-                    <img class="smallImage1"/>
-                </div>
-                <div class="box-1">
-                    <img class="smallImage2"/>
-                </div>
-                <div class="box-1">
+                <div class="box-1 sm-box-7"></div>
+                <div class="box-0 sm-box-1"></div>
+                <div class="box-2 sm-box-5">
                     <div class="buttonHolder">
-                        <div class="bg-centerer" style="position:relative;width:0;height:0">
+                        <div class="bg-centerer">
                             <div class="button-bg">
                             </div>
                         </div>
-                        <button id="orderButton" type="button" class="btn btn-primary randomizeButton" data-ui-color-change="background-color">
+
+                        <button id="randomizeButton" type="button" class="btn btn-primary bottomButton centerer" data-ui-color-change="background-color">
+                            randomize
+                        </button>
+                    </div>
+                </div>
+                <div class="box-1"></div>
+                <div class="box-0 sm-box-1"></div>
+                <div class="box-2 sm-box-5">
+                    <div class="buttonHolder">
+                        <div class="bg-centerer">
+                            <div class="button-bg">
+                            </div>
+                        </div>
+                        <button id="orderButton" type="button" class="btn btn-primary bottomButton centerer" data-ui-color-change="background-color">
                             order
                         </button>
                     </div>
                 </div>
-                <div class="box-2 description-dev">
-                    <h3>
-                        One of a kind hand-made end table crafted for durability out of steel with a powdercoated finish
-                    </h3>
-                </div>
+                <div class="box-0 sm-box-1"></div>
+                <div class="box-0 sm-box-7 height-1"></div>
             </div>
         </footer>
     </div>
