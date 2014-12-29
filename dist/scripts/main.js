@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var startingColorCode = "rgb(146, 151, 66)";
 
-
+    var totalModels = 1;
 
     var startingHeight = 14;
     var minHeight = 12;
@@ -56,12 +56,16 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
+    $("#randomizeButton").click(function() {
+        randomize();
+    });
+
 
 
     function setInlineLoadedInterval() {
         var inline = $("inline");
         var intervalID = setInterval(function() {
-            if (inline.children().length==0) return;
+            if (inline.children().length == 0) return;
 
             clearInterval(intervalID);
             setColors(currentColorCode);
@@ -151,6 +155,38 @@ $(document).ready(function() {
         var insideParens = code.split("(")[1].split(")")[0];
         return insideParens.split(",");
     }
+
+
+    function randomize() {
+        var newVal = Math.floor((Math.random() * (maxHeight - minHeight)) + minHeight);
+        $("#colorslider").val(newVal);
+
+        getNewModel();
+
+
+        setHeight();
+    }
+    var colorBlocks = $(".color-ui-block");
+
+    function getNewModel() {
+        var modelNumber = Math.floor(Math.random() * totalModels);
+        var modelPath = "models/tables/endTable" + modelNumber + ".x3d";
+        var img0path = "url(images/tables/endTable" + modelNumber + "-0.jpg)";
+        var img1path = "url(images/tables/endTable" + modelNumber + "-1.jpg)";
+        
+        var color = Math.floor(Math.random() * colorBlocks.length);
+        var code = $(colorBlocks[color]).attr("data-ui-color-code");
+        currentColorCode = code;
+        setColors(code);
+
+        $("inline").empty();
+
+        $("inline").attr("url", modelPath);
+        $(".smallImage1").css("background-image", img0path);
+        $(".smallImage2").css("background-image", img1path);
+        setInlineLoadedInterval();
+    }
+
 
     setColors(startingColorCode);
     setInlineLoadedInterval();
