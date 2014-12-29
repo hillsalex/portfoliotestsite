@@ -1,6 +1,7 @@
-@import'compass';
+@import 'compass';
 @include global-reset;
-@import'x3dom';
+@import 'x3dom';
+@import 'jquery.nouislider.scss';
 $font-size-xxxx-large:100px;
 $font-size-xxx-large:72px;
 $font-size-xx-large:42px;
@@ -350,6 +351,15 @@ $bodyContainerPadding:40px;
 @media (max-width: 800px) {
     .bodyContainer {
         height: auto;
+        width: 600px;
+        padding: 5px;
+        top: -1px;
+        position: relative;
+    }
+}
+@media (max-width: 600px) {
+    .bodyContainer {
+        height: auto;
         width: 320px;
         padding: 0px;
         top: -1px;
@@ -363,11 +373,14 @@ $bodyContainerPadding:40px;
 //1.65w : 1h
 $boxFullRowWidth:1201px;
 $md-boxFullRowWidth:800px;
+$mds-boxFullRowWidth:600px;
 $sm-boxFullRowWidth:320px;
 $boxFullRowHeight:104px;
 $boxFullRowHeightWithoutPadding:94px;
 $md-boxFullRowHeight:70px;
 $md-boxFullRowHeightWithoutPadding:64px;
+$mds-boxFullRowHeight:52px;
+$mds-boxFullRowHeightWithoutPadding:48px;
 $sm-boxFullRowHeight:27px;
 $sm-boxFullRowHeightWithoutPadding:22px;
 $boxWidth:14.285714285%;
@@ -383,7 +396,6 @@ $sm-header-img-width:60px;
 }
 header {
     margin-bottom: 10px;
-    //height: $boxFullRowHeightWithoutPadding;
     .arbitraryHeightRow {
         .img0 {
             border: 1px solid $borderColor;
@@ -392,21 +404,36 @@ header {
         .img0.first {
             border: 1px solid $borderColor;
         }
+        .header0 {
+            background-image: url("../images/sideView.jpg");
+            background-size: cover;
+        }
+        .header1 {
+            background-image: url("../images/sideView.jpg");
+            background-size: cover;
+        }
+        .header2 {
+            background-image: url("../images/sideView.jpg");
+            background-size: cover;
+        }
+        .header3 {
+            background-image: url("../images/sideView.jpg");
+            background-size: cover;
+        }
+        .header4 {
+            background-image: url("../images/sideView.jpg");
+            background-size: cover;
+        }
     }
 }
-@media (max-width: 1280px) {
+@media (max-width: 600px) {
     header {
-        //height: $md-boxFullRowHeightWithoutPadding;
-    }
-}
-@media (max-width: 800px) {
-    header {
-        height:449px;
-        //height: 140px;
+        height: $sm-boxFullRowHeight*2;
+        border-bottom: 1px solid rgba(0, 0, 0, .3);
         .arbitraryHeightRow {
             .img0 {
                 border-left: 1px solid $borderColor;
-                border-top:0px;
+                border-top: 0px;
                 //width: $sm-header-img-width;
                 //height: 60px;
                 //margin-bottom: 10px;
@@ -419,6 +446,54 @@ header {
             }
         }
     }
+}
+.menuButtonHolder {
+    top: 0px;
+}
+#menuButton {
+    margin-top: 10px;
+    width: 32px;
+    height: 32px;
+    right: 0px;
+    position: absolute;
+    opacity: .7;
+}
+.menuHolder {
+    left: -$bodyContainerPadding;
+    top: 26px;
+    position: absolute;
+    z-index: 100;
+    .firstMargin {
+        padding-top: 4px;
+    }
+    .lastMargin {
+        padding-bottom: 4px;
+    }
+    .arbitraryHeightRow {
+        background-color: rgba(118, 118, 118, 1);
+        opacity: 1;
+        width: 100%;
+    }
+}
+.menuHolder>div {
+    float: left;
+}
+$selectionIndicatorHeight:8px;
+.selectionIndicator {
+    width: 90%;
+    height: $selectionIndicatorHeight;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0px;
+    margin-bottom: $selectionIndicatorHeight/2;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-radius: $selectionIndicatorHeight/2;
+    background-color: rgba(0, 0, 0, .4);
+}
+.selectionIndicator.selected {
+    background-color: $greencolor;
 }
 .fullHeightRow {
     width: $boxFullRowWidth;
@@ -444,6 +519,14 @@ header {
 }
 @media (max-width: 800px) {
     .fullHeightRow {
+        width: $mds-boxFullRowWidth;
+    }
+    .arbitraryHeightRow {
+        width: $mds-boxFullRowWidth;
+    }
+}
+@media (max-width: 600px) {
+    .fullHeightRow {
         width: $sm-boxFullRowWidth;
     }
     .arbitraryHeightRow {
@@ -464,13 +547,13 @@ header {
         width: 50%;
     }
 }
-@media(max-width:800px) {
+@media(max-width:600px) {
     .sm-percent25 {
         width: 25%;
     }
 }
-.height-0{
-    height:0px;
+.height-0 {
+    height: 0px;
 }
 .height-1 {
     height: $boxFullRowHeight;
@@ -572,10 +655,9 @@ header {
         padding: $boxPadding;
         //background-color:rgb(255,0,128);
     }
-
-.height-0{
-    height:0px;
-}
+    .height-0 {
+        height: 0px;
+    }
     .height-1 {
         height: $md-boxFullRowHeight;
     }
@@ -587,6 +669,72 @@ header {
     }
 }
 @media (max-width: 800px) {
+    .mds-box-0 {
+        display: none;
+    }
+    .mds-box-1 {
+        display: block;
+        width: $boxWidth;
+        height: $boxHeight;
+        padding: $boxPadding;
+        //background-color:rgb(255,0,0);
+    }
+    .mds-box-2 {
+        display: block;
+        width: $boxWidth*2;
+        height: $boxHeight;
+        padding: $boxPadding;
+        //background-color:rgb(255,255,0);
+    }
+    .mds-box-3 {
+        display: block;
+        width: $boxWidth*3;
+        height: $boxHeight;
+        padding: $boxPadding;
+        //background-color:rgb(255,0,255);
+    }
+    .mds-box-4 {
+        display: block;
+        width: $boxWidth*4;
+        height: $boxHeight;
+        padding: $boxPadding;
+        //background-color:rgb(255,128,0);
+    }
+    .mds-box-5 {
+        display: block;
+        width: $boxWidth*5;
+        height: $boxHeight;
+        padding: $boxPadding;
+        //background-color:rgb(255,0,128);
+    }
+    .mds-box-6 {
+        display: block;
+        width: $boxWidth*6;
+        height: $boxHeight;
+        padding: $boxPadding;
+        //background-color:rgb(255,0,128);
+    }
+    .mds-box-7 {
+        display: block;
+        width: 100%;
+        height: $boxHeight;
+        padding: $boxPadding;
+        //background-color:rgb(255,0,128);
+    }
+    .height-0 {
+        height: 0px;
+    }
+    .height-1 {
+        height: $mds-boxFullRowHeight;
+    }
+    .height-2 {
+        height: $mds-boxFullRowHeight*2;
+    }
+    .height-3 {
+        height: $mds-boxFullRowHeight*3;
+    }
+}
+@media (max-width: 600px) {
     .sm-box {
         display: block;
     }
@@ -620,6 +768,13 @@ header {
         padding: $boxPadding;
         //background-color:rgb(255,0,255);
     }
+    .sm-box-35 {
+        display: block;
+        width: $boxWidth*3.5;
+        height: $boxHeight;
+        padding: $boxPadding;
+        //background-color:rgb(255,0,255);
+    }
     .sm-box-4 {
         display: block;
         width: $boxWidth*4;
@@ -644,9 +799,9 @@ header {
         height: $boxHeight;
         padding: $boxPadding;
     }
-.height-0{
-    height:0px;
-}
+    .height-0 {
+        height: 0px;
+    }
     .height-1 {
         height: $sm-boxFullRowHeight;
     }
@@ -668,11 +823,20 @@ header {
     .sm-height-3 {
         height: $sm-boxFullRowHeight*3;
     }
+    .sm-height-35 {
+        height: $sm-boxFullRowHeight*3.5;
+    }
     .sm-height-4 {
         height: $sm-boxFullRowHeight*4;
     }
     .sm-height-5 {
         height: $sm-boxFullRowHeight*5;
+    }
+    .sm-height-6 {
+        height: $sm-boxFullRowHeight*6;
+    }
+    .sm-height-7 {
+        height: $sm-boxFullRowHeight*7;
     }
     .sm-height-auto {
         height: auto;
@@ -711,6 +875,19 @@ header {
 @media(max-width:800px) {
     .project-title-dev {
         h1 {
+            margin-top: -6px;
+        }
+        .priceClass {
+            right: 8px;
+        }
+        h2 {
+            padding-top: 6px;
+        }
+    }
+}
+@media(max-width:600px) {
+    .project-title-dev {
+        h1 {
             font-size: 22px;
         }
         .priceClass {
@@ -732,15 +909,31 @@ header {
     width: 100%;
     height: 100%;
     border: 1px solid $borderColor;
-    //background-image:url("../images/grid.PNG");
+    background-image: url("../images/tablechair.jpg");
+    background-size: cover;
 }
-.smallImage1 {
-    width: 100%;
-    height: 100%;
+.smImageHolder {
+    overflow: hidden;
     border: 1px solid $borderColor;
     border-top: 0px;
+    background-color: white;
+}
+.smallImage1 {
+    width: 200%;
+    left: 0%;
+    height: 100%;
     background-image: url("../images/sideView.jpg");
-    background-size: cover;
+    background-size: 50% 100%;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.borderAll {
+    .smallImage2 {
+        border-left: 1px solid $borderColor;
+    }
+}
+.bottomBorder {
+    border-bottom: 1px solid $borderColor;
 }
 .smallImage2 {
     width: 100%;
@@ -762,9 +955,15 @@ header {
         line-height: $md-boxFullRowHeightWithoutPadding;
     }
 }
-@media(max-width:800px){
-    .brand{
-        line-height:$sm-boxFullRowHeight*2;
+@media(max-width:800px) {
+    .brand {
+        font-size: 32px;
+        line-height: $mds-boxFullRowHeightWithoutPadding;
+    }
+}
+@media(max-width:600px) {
+    .brand {
+        line-height: $sm-boxFullRowHeight*2;
     }
 }
 .description-dev {
@@ -779,7 +978,7 @@ header {
     border:1px solid rgba(0, 0, 0, .2);
     border-top:0px;
 }
-@media(max-width:1280px) and (min-width:801){
+@media(max-width:1280px) and (min-width:801px) {
     .description-dev {
         padding: 10px;
         h3 {
@@ -790,18 +989,28 @@ header {
         }
     }
 }
-@media(max-width:800)  {
+@media(max-width:800px) {
     .description-dev {
-        padding:10px;
+        padding: 10px;
         h3 {
             font-size: 14px;
+            font-family: 'Merriweather', serif;
+            line-height: 16px;
+            top: 0px;
+        }
+    }
+}
+@media(max-width:600px) {
+    .description-dev {
+        padding: 10px;
+        h3 {
+            font-size: 16px;
             font-family: 'Merriweather', serif;
             line-height: 20px;
             top: 0px;
         }
     }
 }
-
 .color-text {
     padding-top: 6px;
     h2 {
@@ -816,9 +1025,6 @@ header {
             font-size: 18px;
         }
     }
-}
-.color-slider {
-    text-align: center;
 }
 section, footer {
     .buttonHolder {
@@ -874,6 +1080,14 @@ section, footer {
             height: 27px;
         }
     }
+    @media(max-width:600px) {
+        .buttonHolder {
+            top: -6px;
+        }
+        .secondButtonHolder {
+            top: 14px;
+        }
+    }
     .color-ui-row {
         padding: 8px 0px;
         height: 62px;
@@ -905,4 +1119,74 @@ section, footer {
             margin-bottom: -6px;
         }
     }
+    @media(max-width:600px) {
+        .color-ui-row {
+            margin-top: 26px;
+            //margin-bottom:10px;
+        }
+        .color-text {
+            margin-top: -22px;
+        }
+    }
+}
+.color-slider {
+    text-align: center;
+    width: 80%;
+    left: 12%;
+    @media(max-width: 1280px) {
+        width: 76%;
+        left: 12%;
+    }
+    @media(max-width:1280px) {
+        width: 70%;
+        left: 16%;
+    }
+    @media(max-width:600px) {
+        margin-top: 10px;
+        width: 90%;
+        left: 5%;
+    }
+}
+.noUi-target {
+    margin-top: 14px;
+    border: none;
+    background-color: red;
+    height: 4px;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    @media (max-width: 1280px) and (min-width: 600px) {
+        height: 3px;
+    }
+    @media (max-width: 800px) and (min-width: 600px) {
+        height: 2px;
+    }
+}
+.noUi-handle {
+    height: 24px !important;
+    width: 24px !important;
+    border-radius: 12px !important;
+    top: -9px !important;
+    border: 0px !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    @media (max-width: 1280px) and (min-width: 600px) {
+        height: 20px !important;
+        width: 20px !important;
+        border-radius: 10px !important;
+        top: -8px !important;
+        margin-left: 6px;
+    }
+    @media (max-width: 800px) and (min-width: 600px) {
+        height: 16px !important;
+        width: 16px !important;
+        border-radius: 8px !important;
+        top: -7px !important;
+        margin-left: 8px;
+    }
+}
+.noUi-handle.no-before:before {
+    content: none;
+}
+.noUi-handle.no-after:after {
+    content: none;
 }

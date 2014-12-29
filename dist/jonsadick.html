@@ -39,14 +39,83 @@
             <div class="arbitraryHeightRow height-1 sm-height-3">
                 <div class="box-1 sm-box-7 sm-height-auto">
                     <h1 class="brand sm-height-1">[rnd]</h1>
+                    <div class="menuButtonHolder box-0 sm-box-7" style="position:absolute;">
+                        <img id="menuButton" src="images/menu-512.png" />
+                    </div>
                 </div>
-                <div class="md-box-0 box-0 sm-box-7 sm-height-1"></div>
-                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0 first"></div><div class="box-0 sm-box-2"></div>
-                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0"></div><div class="box-0 sm-box-2"></div>
-                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0"></div><div class="box-0 sm-box-2"></div>
-                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0"></div><div class="box-0 sm-box-2"></div>
-                <div class="box-0 sm-box-2"></div><div class="box-1 sm-box-3 header-bottom-border img0"></div><div class="box-0 sm-box-2"></div>
+
+                <div class="menuHolder height-3" style="display:none;">
+                    <div class="arbitraryHeightRow height-3 firstMargin">
+                        <div class="sm-box-2"></div>
+                        <div class="sm-box-3 header-bottom-border img0 first header0">
+                            <div class="selectionIndicator selected" data-ui-color-change="background-color">
+                            </div>
+                        </div>
+                        <div class="sm-box-2"></div>
+                    </div>
+                    <div class="arbitraryHeightRow height-3">
+                        <div class="sm-box-2"></div>
+                        <div class="sm-box-3 header-bottom-border img0 header1">
+                            <div class="selectionIndicator">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arbitraryHeightRow height-3">
+                        <div class="sm-box-2"></div>
+                        <div class="sm-box-3 header-bottom-border img0 header2">
+                            <div class="selectionIndicator">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arbitraryHeightRow height-3">
+                        <div class="sm-box-2"></div>
+                        <div class="sm-box-3 header-bottom-border img0 header3">
+                            <div class="selectionIndicator">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arbitraryHeightRow height-3 lastMargin">
+                        <div class="sm-box-2"></div>
+                        <div class="sm-box-3 header-bottom-border img0 header4">
+                            <div class="selectionIndicator">
+                            </div>
+                        </div>
+                        <div class="sm-box-2"></div>
+                    </div>
+                </div>
+                <div class="md-box-0 box-0 sm-box-0 sm-height-1"></div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-1 sm-box-0 header-bottom-border img0 header0 first">
+                    <div class="selectionIndicator selected" data-ui-color-change="background-color">
+                    </div>
+                </div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-1 sm-box-0 header-bottom-border img0 header1">
+                    <div class="selectionIndicator">
+                    </div>
+                </div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-1 sm-box-0 header-bottom-border img0 header2">
+                    <div class="selectionIndicator">
+                    </div>
+                </div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-1 sm-box-0 header-bottom-border img0 header3">
+                    <div class="selectionIndicator">
+                    </div>
+                </div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-1 sm-box-0 header-bottom-border img0 header4">
+                    <div class="selectionIndicator">
+                    </div>
+                </div>
+                <div class="box-0 sm-box-0"></div>
                 <div class="box-1 sm-box-0"></div>
+
             </div>
         </header>
         <section>
@@ -65,12 +134,23 @@
                 <div class="box-0 md-box-0 sm-box-7 height-1"></div>
             </div>
             <div class="arbitraryHeightRow height-3 sm-height-auto">
-                <div class="box-1 sm-box-1 sm-height-1"></div>
-                <div class="box-2 sm-box-5 sm-height-5">
+                <div class="box-1 sm-box-0 sm-height-1"></div>
+                <div class="box-2 sm-box-7 sm-height-7">
                     <x3d id="main3d-dev">
                         <scene>
-                            <Viewpoint id="front" position="0 1 1" orientation="0 -0.2 -1" description="camera" "set_bind"="true"></Viewpoint>
-                            <inline url="models/box 2 son.stl.x3d" nameSpaceName=""></inline>
+                            <Viewpoint id="front" position="0 1 10" centerOfRotation="0 0 -20" description="camera"></Viewpoint>
+                            <!--right, up, towards camera -->
+                            <transform translation="5 -4 -15">
+                                <transform rotation="1 0 0 .4">
+                                    <transform rotation="0 1 0 .1">
+                                        <transform id="verticalScale" scale="1 1 1">
+                                            <inline url="models/box 2 son.stl.x3d" nameSpaceName=""></inline>
+                                        </transform>
+                                        
+
+                                    </transform>
+                                </transform>
+                            </transform>
                         </scene>
                     </x3d>
                 </div>
@@ -82,8 +162,7 @@
                             <div class="color-text">
                                 <h2>height</h2>
                             </div>
-                            <div class="color-slider">
-                                slider goes here...
+                            <div id="colorslider" class="color-slider">
                             </div>
                         </div>
                     </div>
@@ -117,8 +196,8 @@
                     </div>
                     <div class="row100 height-1"></div>
                 </div>
-                <div class="box-0 sm-box-1 sm-height-1"></div>
-                <div class="box-2 sm-box-5 sm-height-5">
+                <div class="box-0 sm-box-0 sm-height-1"></div>
+                <div class="box-2 sm-box-7 sm-height-7">
                     <div class="tableMainPic "></div>
                 </div>
             </div>
@@ -126,17 +205,26 @@
         <section>
             <div class="arbitraryHeightRow height-1 sm-height-1">
                 <div class="box-0 sm-box-7 height-0"></div>
-                <div class="box-1 sm-height-1"></div>
-                <div class="box-1 sm-box-25 sm-height-25">
+                <div class="box-1 sm-box-0 sm-height-1"></div>
+                <div class="box-0 sm-box-0 mds-box-2 height-2">
                     <div class="smallImage1"></div>
                 </div>
-                <div class="box-1 sm-box-25 sm-height-25">
+                <div class="box-1 mds-box-0 sm-box-35 sm-height-35 smImageHolder">
+                    <div class="smallImage1"></div>
+                </div>
+                <div class="box-1 mds-box-0 sm-box-35 sm-height-35">
                     <div class="smallImage2"></div>
                 </div>
-                <div class="box-1 sm-height-25"></div>
+                <div class="box-1 mds-box-0 sm-box-0 sm-height-25"></div>
 
-                <div class="box-0 sm-box-1 sm-height-1"></div>
-                <div class="box-2 sm-box-5 description-dev sm-height-5">
+                <div class="box-0 mds-box-1 sm-box-0 bottomBorder height-2"></div>
+
+                <div class="box-0 sm-box-0 mds-box-2 height-2 borderAll">
+                    <div class="smallImage2"></div>
+                </div>
+                <div class="box-0 mds-box-1 sm-box-0 height-2"></div>
+                <div class="box-0 mds-box-1 sm-box-0"></div>
+                <div class="box-2 sm-box-7 mds-box-5 description-dev sm-height-3">
                     <h3>
                         One-of-a-kind hand made end table crafted for durability out of steel with a powdercoated finish
                     </h3>
@@ -145,10 +233,12 @@
             </div>
         </section>
         <footer>
+            <div class="arbitraryHeightRow height-1 box-0 sm-box-0 mds-box-7"></div>
+            <div class="arbitraryHeightRow height-1 box-0 sm-box-0 mds-box-7"></div>
             <div class="arbitraryHeightRow height-1">
-                <div class="box-1 sm-box-7"></div>
-                <div class="box-0 sm-box-1"></div>
-                <div class="box-2 sm-box-5">
+                <div class="box-1 sm-box-0"></div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-2 sm-box-7">
                     <div class="buttonHolder">
                         <div class="bg-centerer">
                             <div class="button-bg">
@@ -160,10 +250,10 @@
                         </button>
                     </div>
                 </div>
-                <div class="box-1"></div>
-                <div class="box-0 sm-box-1"></div>
-                <div class="box-2 sm-box-5">
-                    <div class="buttonHolder">
+                <div class="box-1 sm-box-0"></div>
+                <div class="box-0 sm-box-0"></div>
+                <div class="box-2 sm-box-7">
+                    <div class="buttonHolder secondButtonHolder">
                         <div class="bg-centerer">
                             <div class="button-bg">
                             </div>
