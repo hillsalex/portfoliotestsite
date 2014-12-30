@@ -181,7 +181,9 @@ $(document).ready(function() {
         var img1path = "url(images/tables/endTable" + modelNumber + "-1.jpg)";
         
         var color = Math.floor(Math.random() * colorBlocks.length);
+        colorBlocks.removeClass("selected");
         var code = $(colorBlocks[color]).attr("data-ui-color-code");
+        $(colorBlocks[color]).addClass("selected");
         currentColorCode = code;
         setColors(code);
 
