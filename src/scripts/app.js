@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+
+    var idToString = 
+    [
+      'nzpd',
+      'random1'
+    ];
+
     var startingColorCode = "rgb(146, 151, 66)";
 
     var totalModels = 1;
@@ -65,6 +72,7 @@ $(document).ready(function() {
       window.open('mailto:hills.jon@gmail.com?subject=[rnd] End table order&body=I used a form on rnd.com to order an end table! It\'s table #'+currentModelNum+' at a height of '+$('#colorslider').val() + " inches.%0D%0A%0D%0AFeel free to fill in a message here, as well as add any relevant information.");
     });
 
+    $("#threedidentifier").find("h2").text(idToString[currentModelNum]);
 
 
     function setInlineLoadedInterval() {
@@ -74,6 +82,7 @@ $(document).ready(function() {
 
             clearInterval(intervalID);
             setColors(currentColorCode);
+            setHeight();
 
         }, 10);
     }
@@ -139,6 +148,9 @@ $(document).ready(function() {
         var widthRatio = 1 / heightRatio;
         smImage.css("background-size", (50 * widthRatio) + "% 100%");
         smImage.css("left", (50 - 50 * widthRatio) + "%");
+
+        $("#sm-height-text").text(setHeight + " inches");
+        $("#height-text").text(setHeight+" inches");
     }
 
 
@@ -177,9 +189,11 @@ $(document).ready(function() {
         var modelNumber = Math.floor(Math.random() * totalModels);
         currentModelNum=modelNumber;
         var modelPath = "models/tables/endTable" + modelNumber + ".x3d";
-        var img0path = "url(images/tables/endTable" + modelNumber + "-0.jpg)";
-        var img1path = "url(images/tables/endTable" + modelNumber + "-1.jpg)";
+        var img0path = "url(images/tables/endTable" + modelNumber + "-0.png)";
+        var img1path = "url(images/tables/endTable" + modelNumber + "-1.png)";
         
+        $("#threedidentifier").find("h2").text(idToString[currentModelNum]);
+
         var color = Math.floor(Math.random() * colorBlocks.length);
         colorBlocks.removeClass("selected");
         var code = $(colorBlocks[color]).attr("data-ui-color-code");
