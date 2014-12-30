@@ -16,6 +16,43 @@
 
 <body>
     <!--<div id="bodyBG" style="width:2101px;height:1284px;position:absolute;left:-130px;top:-41px"></div>-->
+    <div class="menuHolder height-3" style="display:none;">
+        <div class="arbitraryHeightRow height-4 firstMargin">
+            <div class="box-15"></div>
+            <div class="sm-box-4 header-bottom-border height-4 img0 first header0">
+                <div class="selectionIndicator selected" data-ui-color-change="background-color">
+                </div>
+            </div>
+        </div>
+        <div class="arbitraryHeightRow height-4">
+            <div class="box-15"></div>
+            <div class="sm-box-4 header-bottom-border img0 header1">
+                <div class="selectionIndicator">
+                </div>
+            </div>
+        </div>
+        <div class="arbitraryHeightRow height-4">
+            <div class="box-15"></div>
+            <div class="sm-box-4 header-bottom-border img0 header2">
+                <div class="selectionIndicator">
+                </div>
+            </div>
+        </div>
+        <div class="arbitraryHeightRow height-4">
+            <div class="box-15"></div>
+            <div class="sm-box-4 header-bottom-border img0 header3">
+                <div class="selectionIndicator">
+                </div>
+            </div>
+        </div>
+        <div class="arbitraryHeightRow height-4 lastMargin">
+            <div class="box-15"></div>
+            <div class="sm-box-4 header-bottom-border img0 header4">
+                <div class="selectionIndicator">
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="bodyContainer center">
         <header>
             <div class="arbitraryHeightRow height-1 sm-height-3">
@@ -26,45 +63,7 @@
                     </div>
                 </div>
 
-                <div class="menuHolder height-3" style="display:none;">
-                    <div class="arbitraryHeightRow height-3 firstMargin">
-                        <div class="sm-box-2"></div>
-                        <div class="sm-box-3 header-bottom-border img0 first header0">
-                            <div class="selectionIndicator selected" data-ui-color-change="background-color">
-                            </div>
-                        </div>
-                        <div class="sm-box-2"></div>
-                    </div>
-                    <div class="arbitraryHeightRow height-3">
-                        <div class="sm-box-2"></div>
-                        <div class="sm-box-3 header-bottom-border img0 header1">
-                            <div class="selectionIndicator">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="arbitraryHeightRow height-3">
-                        <div class="sm-box-2"></div>
-                        <div class="sm-box-3 header-bottom-border img0 header2">
-                            <div class="selectionIndicator">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="arbitraryHeightRow height-3">
-                        <div class="sm-box-2"></div>
-                        <div class="sm-box-3 header-bottom-border img0 header3">
-                            <div class="selectionIndicator">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="arbitraryHeightRow height-3 lastMargin">
-                        <div class="sm-box-2"></div>
-                        <div class="sm-box-3 header-bottom-border img0 header4">
-                            <div class="selectionIndicator">
-                            </div>
-                        </div>
-                        <div class="sm-box-2"></div>
-                    </div>
-                </div>
+
                 <div class="md-box-0 box-0 sm-box-0 sm-height-1"></div>
                 <div class="box-0 sm-box-0"></div>
                 <div class="box-1 sm-box-0 header-bottom-border img0 header0 first">
@@ -115,22 +114,25 @@
                 </div>
                 <div class="box-0 md-box-0 sm-box-7 height-1"></div>
             </div>
+
             <div class="arbitraryHeightRow height-3 sm-height-auto">
                 <div class="box-1 sm-box-0 sm-height-1"></div>
                 <div class="box-2 sm-box-7 sm-height-7">
-                    <div id="threedidentifier"> <h2>#1</h2> </div>
+                    <div id="threedidentifier">
+                        <h2>#1</h2> </div>
                     <x3d id="main3d-dev">
                         <scene>
+                                <navigationInfo id="navType" type='"turntable"' headlight="true" typeparams="0.0 0.0 0.4 2" explorationmode="all" avatarsize="0.25,1.6,0.75" speed="1" transitiontime="1" transitiontype="LINEAR "></navigationInfo>
                             <Viewpoint id="front" position="0 1 10" centerOfRotation="0 0 -20" description="camera"></Viewpoint>
                             <!--right, up, towards camera -->
                             <transform translation="5 -4 -15">
-                                <transform rotation="1 0 0 .4">
+                                <!--<transform rotation="1 0 0 .4">-->
                                     <transform rotation="0 1 0 .1">
                                         <transform id="verticalScale" scale="1 1 1">
                                             <inline url="models/box 2 son.stl.x3d" nameSpaceName=""></inline>
                                         </transform>
                                     </transform>
-                                </transform>
+                                <!--</transform>-->
                             </transform>
                         </scene>
                     </x3d>
@@ -144,19 +146,20 @@
                                 <h2>height</h2>
                             </div>
                             <div class="box-0 sm-box sm-height-holder">
-                            <h2 class="left">height</h2><h2 id="sm-height-text">14 inches</h2>
+                                <h2 class="left">height</h2>
+                                <h2 id="sm-height-text">14 inches</h2>
                             </div>
                             <div id="colorslider" class="color-slider">
                             </div>
                         </div>
                     </div>
                     <div class="row100 md-height-2 md-float sm-nofloat">
-                            <div class="height-text-holder sm-box-0">
-                                <h2 id="height-text">14 inches</h2>
-                            </div>
-                            <div id="colorslider" class="color-slider">
-                            </div>
+                        <div class="height-text-holder sm-box-0">
+                            <h2 id="height-text">14 inches</h2>
                         </div>
+                        <div id="colorslider" class="color-slider">
+                        </div>
+                    </div>
                     <div class="row100 height-1 md-float sm-nofloat">
 
                         <div class="row100 color-ui-row">
@@ -188,6 +191,21 @@
                     <div class="row100 height-1"></div>
                 </div>
                 <div class="box-0 sm-box-0 sm-height-1"></div>
+                <div class="arbitraryHeightRow box-0 sm-box height-2">
+                    <div class="box-2"></div>
+                    <div class="box-3">
+                        <div class="buttonHolder small">
+                            <div class="bg-centerer">
+                                <div class="button-bg">
+                                </div>
+                            </div>
+
+                            <button id="randomizeButton" type="button" class="btn btn-primary bottomButton centerer" data-ui-color-change="background-color">
+                                randomize
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="box-2 sm-box-7 sm-height-7">
                     <div class="tableMainPic "></div>
                 </div>
@@ -229,7 +247,7 @@
             <div class="arbitraryHeightRow height-1">
                 <div class="box-1 sm-box-0"></div>
                 <div class="box-0 sm-box-0"></div>
-                <div class="box-2 sm-box-7">
+                <div class="box-2 sm-box-0">
                     <div class="buttonHolder">
                         <div class="bg-centerer">
                             <div class="button-bg">
@@ -254,12 +272,18 @@
                         </button>
                     </div>
                 </div>
-                <div class="box-0 sm-box-1"></div>
+                <div class="box-0 sm-box-0"></div>
                 <div class="box-0 sm-box-7 height-1"></div>
             </div>
-            <div class="arbitraryHeightRow">
-            <div class="box-1" style="height:1px"></div>
-                <div class="box-5 bottomDivider" style="height:1px;"></div>
+            <div class="arbitraryHeightRow" style="height:1px;">
+                <div class="box-1 sm-box-0" style="height:1px"></div>
+                <div class="box-5 sm-box-7 bottomDivider" style="height:1px;"></div>
+            </div>
+            <div class="arbitraryHeightRow height-1">
+                <div class="box-1 sm-box-0"></div>
+                <div class="box-5 sm-box-7 attributionText">
+                    <h4>&copy; 2014-2015 jonathan hills. made by alexander hills.</h4>
+                </div>
             </div>
         </footer>
     </div>

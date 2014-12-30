@@ -94,7 +94,7 @@ $sm-header-img-width:60px;
 .mb10 {
     margin-bottom: 10px;
 }
-header {
+header, .menuHolder{
     margin-bottom: 10px;
     .arbitraryHeightRow {
         .img0 {
@@ -159,10 +159,10 @@ header {
     opacity: .7;
 }
 .menuHolder {
-    left: -$bodyContainerPadding;
-    top: 26px;
+    top: 52px;
     position: absolute;
     z-index: 100;
+    width:100%;
     .firstMargin {
         padding-top: 4px;
     }
@@ -264,6 +264,9 @@ $selectionIndicatorHeight:8px;
 .height-3 {
     height: $boxFullRowHeight*3;
 }
+.height-4 {
+    height: $boxFullRowHeight*4;
+}
 .box-show{
     display:block;
 }
@@ -273,6 +276,13 @@ $selectionIndicatorHeight:8px;
 .box-1 {
     display: block;
     width: $boxWidth;
+    height: $boxHeight;
+    padding: $boxPadding;
+    //background-color:rgb(255,0,0);
+}
+.box-15 {
+    display: block;
+    width: $boxWidth*1.5;
     height: $boxHeight;
     padding: $boxPadding;
     //background-color:rgb(255,0,0);
@@ -537,6 +547,9 @@ $selectionIndicatorHeight:8px;
     .height-3 {
         height: $sm-boxFullRowHeight*3;
     }
+    .height-4 {
+        height: $sm-boxFullRowHeight*4;
+    }
     .sm-height-1 {
         height: $sm-boxFullRowHeight;
     }
@@ -788,6 +801,9 @@ section, footer {
         position: relative;
         top: 32px;
     }
+    .buttonHolder.small{
+        margin-top:10px;
+    }
     #randomizeButton, #orderButton {
         width: 150px;
         border-radius: 20px;
@@ -916,6 +932,9 @@ section, footer {
             left: -17px;
             border: 3px solid $dkgray;
         }
+        .secondButtonHolder{
+            top:0px;
+        }
     }
 }
 .color-slider {
@@ -979,7 +998,9 @@ section, footer {
 .noUi-handle.no-after:after {
     content: none;
 }
-
+.x3dom-touch-marker{
+    display:none !important;
+}
 .bottomDivider{
     border-bottom:1px solid $borderColor;
 }
@@ -994,5 +1015,12 @@ section, footer {
     right:10px;
     h2{
         font-size:$font-size-large;
+    }
+}
+.attributionText{
+    h4{
+        margin-top: 6px;
+        font-size:10px;
+        text-align: right;
     }
 }

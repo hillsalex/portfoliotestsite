@@ -55,8 +55,6 @@ $(document).ready(function() {
         makeUIClick($(b));
     });
 
-    $("#front").attr("set_bind", "true");
-
 
     $("#main3d-dev").on('mousewheel', function(event) {
         var baba = 0;
@@ -83,7 +81,8 @@ $(document).ready(function() {
             clearInterval(intervalID);
             setColors(currentColorCode);
             setHeight();
-
+            $("#front").attr("set_bind", "true");
+            
         }, 10);
     }
 
