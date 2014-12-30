@@ -9,6 +9,7 @@ $(document).ready(function() {
     var maxHeight = 18;
 
     var currentColorCode = startingColorCode;
+    var currentModelNum = 0;
 
     var menu = $(".menuHolder");
     $(".menuHolder").css('width', window.innerWidth + 'px');
@@ -58,6 +59,10 @@ $(document).ready(function() {
 
     $("#randomizeButton").click(function() {
         randomize();
+    });
+    $("#orderButton").click(function(){
+
+      window.open('mailto:hills.jon@gmail.com?subject=[rnd] End table order&body=I used a form on rnd.com to order an end table! It\'s table #'+currentModelNum+' at a height of '+$('#colorslider').val() + " inches.%0D%0A%0D%0AFeel free to fill in a message here, as well as add any relevant information.");
     });
 
 
@@ -170,6 +175,7 @@ $(document).ready(function() {
 
     function getNewModel() {
         var modelNumber = Math.floor(Math.random() * totalModels);
+        currentModelNum=modelNumber;
         var modelPath = "models/tables/endTable" + modelNumber + ".x3d";
         var img0path = "url(images/tables/endTable" + modelNumber + "-0.jpg)";
         var img1path = "url(images/tables/endTable" + modelNumber + "-1.jpg)";

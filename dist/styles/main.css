@@ -1320,13 +1320,14 @@ section #randomizeButton, section #orderButton, footer #randomizeButton, footer 
   margin-right: auto;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
+  outline: none;
 }
-/* line 755, ../../src/styles/main.scss */
+/* line 756, ../../src/styles/main.scss */
 section .bg-centerer, footer .bg-centerer {
   width: 100%;
   position: absolute;
 }
-/* line 759, ../../src/styles/main.scss */
+/* line 760, ../../src/styles/main.scss */
 section .button-bg, footer .button-bg {
   -webkit-filter: blur(1px);
           filter: blur(1px);
@@ -1344,47 +1345,47 @@ section .button-bg, footer .button-bg {
   display: block;
   position: relative;
 }
-/* line 775, ../../src/styles/main.scss */
+/* line 776, ../../src/styles/main.scss */
 section .centerer, footer .centerer {
   display: block;
   width: 0px;
   margin: 0px auto;
 }
 @media (max-width: 1280px) {
-  /* line 781, ../../src/styles/main.scss */
+  /* line 782, ../../src/styles/main.scss */
   section .buttonHolder, footer .buttonHolder {
     top: 21px;
   }
-  /* line 784, ../../src/styles/main.scss */
+  /* line 785, ../../src/styles/main.scss */
   section #randomizeButton, section #orderButton, footer #randomizeButton, footer #orderButton {
     font-size: 18px;
   }
-  /* line 787, ../../src/styles/main.scss */
+  /* line 788, ../../src/styles/main.scss */
   section .button-bg, footer .button-bg {
     height: 27px;
   }
 }
 @media (max-width: 600px) {
-  /* line 792, ../../src/styles/main.scss */
+  /* line 793, ../../src/styles/main.scss */
   section .buttonHolder, footer .buttonHolder {
     top: -6px;
   }
-  /* line 795, ../../src/styles/main.scss */
+  /* line 796, ../../src/styles/main.scss */
   section .secondButtonHolder, footer .secondButtonHolder {
     top: 14px;
   }
 }
-/* line 799, ../../src/styles/main.scss */
+/* line 800, ../../src/styles/main.scss */
 section .color-ui-row, footer .color-ui-row {
   padding: 8px 0px;
   height: 62px;
 }
-/* line 803, ../../src/styles/main.scss */
+/* line 804, ../../src/styles/main.scss */
 section .color-ui, footer .color-ui {
   padding: 0px;
   float: left;
 }
-/* line 807, ../../src/styles/main.scss */
+/* line 808, ../../src/styles/main.scss */
 section .color-ui-block, footer .color-ui-block {
   cursor: pointer;
   position: relative;
@@ -1392,7 +1393,7 @@ section .color-ui-block, footer .color-ui-block {
   width: 28px;
   height: 28px;
 }
-/* line 815, ../../src/styles/main.scss */
+/* line 816, ../../src/styles/main.scss */
 section .color-ui-block.selected, footer .color-ui-block.selected {
   width: 34px;
   height: 34px;
@@ -1401,48 +1402,48 @@ section .color-ui-block.selected, footer .color-ui-block.selected {
   border: 3px solid #58585a;
 }
 @media (max-width: 1280px) {
-  /* line 823, ../../src/styles/main.scss */
+  /* line 824, ../../src/styles/main.scss */
   section .colorDivider, footer .colorDivider {
     height: 20px;
   }
-  /* line 826, ../../src/styles/main.scss */
+  /* line 827, ../../src/styles/main.scss */
   section .color-ui-block.selected, footer .color-ui-block.selected {
     margin-bottom: -6px;
   }
 }
 @media (max-width: 600px) {
-  /* line 831, ../../src/styles/main.scss */
+  /* line 832, ../../src/styles/main.scss */
   section .color-ui-row, footer .color-ui-row {
     margin-top: 26px;
   }
-  /* line 835, ../../src/styles/main.scss */
+  /* line 836, ../../src/styles/main.scss */
   section .color-text, footer .color-text {
     margin-top: -22px;
   }
 }
 
-/* line 840, ../../src/styles/main.scss */
+/* line 841, ../../src/styles/main.scss */
 .color-slider {
   text-align: center;
   width: 80%;
   left: 12%;
 }
 @media (max-width: 1280px) {
-  /* line 840, ../../src/styles/main.scss */
+  /* line 841, ../../src/styles/main.scss */
   .color-slider {
     width: 76%;
     left: 12%;
   }
 }
 @media (max-width: 1280px) {
-  /* line 840, ../../src/styles/main.scss */
+  /* line 841, ../../src/styles/main.scss */
   .color-slider {
     width: 70%;
     left: 16%;
   }
 }
 @media (max-width: 600px) {
-  /* line 840, ../../src/styles/main.scss */
+  /* line 841, ../../src/styles/main.scss */
   .color-slider {
     margin-top: 10px;
     width: 90%;
@@ -1450,7 +1451,7 @@ section .color-ui-block.selected, footer .color-ui-block.selected {
   }
 }
 
-/* line 858, ../../src/styles/main.scss */
+/* line 859, ../../src/styles/main.scss */
 .noUi-target {
   margin-top: 14px;
   border: none;
@@ -1460,19 +1461,19 @@ section .color-ui-block.selected, footer .color-ui-block.selected {
   -webkit-box-shadow: none !important;
 }
 @media (max-width: 1280px) and (min-width: 600px) {
-  /* line 858, ../../src/styles/main.scss */
+  /* line 859, ../../src/styles/main.scss */
   .noUi-target {
     height: 3px;
   }
 }
 @media (max-width: 800px) and (min-width: 600px) {
-  /* line 858, ../../src/styles/main.scss */
+  /* line 859, ../../src/styles/main.scss */
   .noUi-target {
     height: 2px;
   }
 }
 
-/* line 872, ../../src/styles/main.scss */
+/* line 873, ../../src/styles/main.scss */
 .noUi-handle {
   height: 24px !important;
   width: 24px !important;
@@ -1483,7 +1484,7 @@ section .color-ui-block.selected, footer .color-ui-block.selected {
   -webkit-box-shadow: none !important;
 }
 @media (max-width: 1280px) and (min-width: 600px) {
-  /* line 872, ../../src/styles/main.scss */
+  /* line 873, ../../src/styles/main.scss */
   .noUi-handle {
     height: 20px !important;
     width: 20px !important;
@@ -1493,7 +1494,7 @@ section .color-ui-block.selected, footer .color-ui-block.selected {
   }
 }
 @media (max-width: 800px) and (min-width: 600px) {
-  /* line 872, ../../src/styles/main.scss */
+  /* line 873, ../../src/styles/main.scss */
   .noUi-handle {
     height: 16px !important;
     width: 16px !important;
@@ -1503,12 +1504,12 @@ section .color-ui-block.selected, footer .color-ui-block.selected {
   }
 }
 
-/* line 895, ../../src/styles/main.scss */
+/* line 896, ../../src/styles/main.scss */
 .noUi-handle.no-before:before {
   content: none;
 }
 
-/* line 898, ../../src/styles/main.scss */
+/* line 899, ../../src/styles/main.scss */
 .noUi-handle.no-after:after {
   content: none;
 }
