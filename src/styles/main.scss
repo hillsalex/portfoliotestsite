@@ -2,7 +2,6 @@
 @include global-reset;
 @import 'x3dom';
 @import 'jquery.nouislider.scss';
-
 $font-size-xxxx-large:100px;
 $font-size-xxx-large:72px;
 $font-size-xx-large:42px;
@@ -27,6 +26,8 @@ $headerImage2:url("../images/headers/header2.jpg");
 $headerImage3:url("../images/headers/header3.jpg");
 $headerImage4:url("../images/headers/header4.jpg");
 $mainPic:url("../images/tablechair.jpg");
+$comingSoonUrl80:url("../images/headers/header0.jpg");
+$comingSoonUrl50:url("../images/headers/header0.jpg");
 body {
     color: $dkgray;
     font-family: 'Quicksand', 'Roboto', sans-serif;
@@ -94,7 +95,7 @@ $sm-header-img-width:60px;
 .mb10 {
     margin-bottom: 10px;
 }
-header, .menuHolder{
+header, .menuHolder {
     margin-bottom: 10px;
     .arbitraryHeightRow {
         .img0 {
@@ -162,7 +163,7 @@ header, .menuHolder{
     top: 52px;
     position: absolute;
     z-index: 100;
-    width:100%;
+    width: 100%;
     .firstMargin {
         padding-top: 4px;
     }
@@ -267,8 +268,8 @@ $selectionIndicatorHeight:8px;
 .height-4 {
     height: $boxFullRowHeight*4;
 }
-.box-show{
-    display:block;
+.box-show {
+    display: block;
 }
 .box-0 {
     display: none;
@@ -314,7 +315,6 @@ $selectionIndicatorHeight:8px;
     height: $boxHeight;
     padding: $boxPadding;
     //background-color:rgb(255,0,128);
-    
 }
 .box-6 {
     display: block;
@@ -751,19 +751,18 @@ $selectionIndicatorHeight:8px;
         }
     }
 }
-.sm-height-holder{
-    height:14px;
-    h2{
-        top:-10px;
-        font-size:$font-size-medium;
+.sm-height-holder {
+    height: 14px;
+    h2 {
+        top: -10px;
+        font-size: $font-size-medium;
         position: absolute;
-
     }
-    .left{
-        left:16px;
+    .left {
+        left: 16px;
     }
-    #sm-height-text{
-        right:16px;
+    #sm-height-text {
+        right: 16px;
     }
 }
 .height-text-holder {
@@ -802,8 +801,8 @@ section, footer {
         position: relative;
         top: 32px;
     }
-    .buttonHolder.small{
-        margin-top:10px;
+    .buttonHolder.small {
+        margin-top: 10px;
     }
     .randomizeButton, #orderButton {
         width: 150px !important;
@@ -822,6 +821,16 @@ section, footer {
     .bg-centerer {
         width: 100%;
         position: absolute;
+    }
+    .coming-soon {
+        width: 150px;
+        background-image: $comingSoonUrl80;
+        height: 80px;
+        position: absolute;
+        top: -22.5px;
+        left: 96px;
+        z-index: 100;
+        opacity: 0.5;
     }
     .button-bg {
         filter: blur(1px);
@@ -854,6 +863,22 @@ section, footer {
         .button-bg {
             height: 27px;
         }
+        .coming-soon {
+            width: 150px;
+            background-image: $comingSoonUrl50;
+            height: 50px;
+            position: absolute;
+            top: -12px;
+            left: 39px;
+            z-index: 100;
+            opacity: 0.5;
+        }
+    }
+    @media(max-width:800px) {
+        .coming-soon {
+            left: 11px;
+            
+        }
     }
     @media(max-width:600px) {
         .buttonHolder {
@@ -861,6 +886,9 @@ section, footer {
         }
         .secondButtonHolder {
             top: 14px;
+        }
+        .coming-soon{
+            left:85px;
         }
     }
     .color-ui-row {
@@ -897,23 +925,21 @@ section, footer {
             margin-bottom: -6px;
         }
     }
-    @media(max-width:800px) and (min-width:601px){
+    @media(max-width:800px) and (min-width:601px) {
         .colorDivider {
             height: 7px;
         }
         .color-ui-row {
             margin-top: 26px;
-            width:80%;
-            margin-left:8px;
+            width: 80%;
+            margin-left: 8px;
         }
-        .color-ui-block {
-            
-            } .color-ui-block.selected {}
+        .color-ui-block {} .color-ui-block.selected {}
     }
     @media(max-width:600px) {
         .color-ui-row {
             margin-top: 18px;
-            margin-bottom:10px;
+            margin-bottom: 10px;
         }
         .color-text {
             margin-top: -22px;
@@ -933,8 +959,8 @@ section, footer {
             left: -17px;
             border: 3px solid $dkgray;
         }
-        .secondButtonHolder{
-            top:0px;
+        .secondButtonHolder {
+            top: 0px;
         }
     }
 }
@@ -999,30 +1025,30 @@ section, footer {
 .noUi-handle.no-after:after {
     content: none;
 }
-.x3dom-touch-marker{
-    display:none !important;
+.x3dom-touch-marker {
+    display: none !important;
 }
-.bottomDivider{
-    border-bottom:1px solid $borderColor;
+.bottomDivider {
+    border-bottom: 1px solid $borderColor;
 }
-@media (max-width:800px) and (min-width:601px){
-    .bottomDivider{
-        margin-top:20px;
+@media (max-width: 800px) and (min-width: 601px) {
+    .bottomDivider {
+        margin-top: 20px;
     }
 }
-#threedidentifier{
+#threedidentifier {
     position: absolute;
-    bottom:10px;
-    right:10px;
-    h2{
-        font-size:$font-size-large;
+    bottom: 10px;
+    right: 10px;
+    h2 {
+        font-size: $font-size-large;
     }
     z-index:100;
 }
-.attributionText{
-    h4{
+.attributionText {
+    h4 {
         margin-top: 6px;
-        font-size:10px;
+        font-size: 10px;
         text-align: right;
     }
 }

@@ -65,11 +65,12 @@ $(document).ready(function() {
     $(".randomizeButton").click(function() {
         randomize();
     });
+    /*
     $("#orderButton").click(function(){
 
       window.open('mailto:hills.jon@gmail.com?subject=[rnd] End table order&body=I used a form on rnd.com to order an end table! It\'s table '+idToString[currentModelNum]+' at a height of '+$('#colorslider').val() + " inches, using color " +currentColorCode+ ".%0D%0A%0D%0AFeel free to fill in a message here, as well as add any relevant information.");
     });
-
+    */
     $("#threedidentifier").find("h2").text(idToString[currentModelNum]);
 
 
