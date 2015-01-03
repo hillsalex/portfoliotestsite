@@ -9,11 +9,11 @@ $(document).ready(function() {
 
     var startingColorCode = "rgb(146, 151, 66)";
 
-    var totalModels = 1;
+    var totalModels = 2;
 
-    var startingHeight = 14;
-    var minHeight = 12;
-    var maxHeight = 18;
+    var startingHeight = 18;
+    var minHeight = 17;
+    var maxHeight = 20;
 
     var currentColorCode = startingColorCode;
     var currentModelNum = 0;
