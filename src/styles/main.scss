@@ -804,8 +804,8 @@ section, footer {
     .buttonHolder.small{
         margin-top:10px;
     }
-    #randomizeButton, #orderButton {
-        width: 150px;
+    .randomizeButton, #orderButton {
+        width: 150px !important;
         border-radius: 20px;
         position: relative;
         font-size: $font-size-large;
@@ -847,7 +847,7 @@ section, footer {
         .buttonHolder {
             top: 21px;
         }
-        #randomizeButton, #orderButton {
+        .randomizeButton, #orderButton {
             font-size: $font-size-medium;
         }
         .button-bg {
