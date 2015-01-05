@@ -1,12 +1,38 @@
 $(document).ready(function() {
 
+
+    var idToString = 
+    [
+      '#0.72 0.0 1.43 -0.8 0.0 0.0 0.0 -0.13',
+      '#0.66 0.22 1.66 0.08 -0.12 0.58 0.96',
+      '#0.78 0.47 1.55 1.5 1.5 -0.6 -0.27 -0.53',
+      '#0.29 0.57 -0.48 0.06 -0.06 0.18 0.0 0.0',
+      '#0.73 -0.29 -1.16 -0.22 0.44 1.52 -0.67',
+      '#0.66 0.44 0.11 0.18 0.04 0.36 -0.88',
+      '#-0.84 1.05 -1.48 0.0 0.0 -0.0 -1.04',
+      '#0.0 1.6 0.0 1.26 -1.26 0.25 0.05 0.05',
+      '#-0.08 -0.05 0.18 0.16 0.41 -0.41 1.15',
+      '#0.87 0.73 1.89 1.69 -0.28 -0.56 0.0',
+      '#1.98 1.58 1.19 -0.34 -0.34 0.88 1.02',
+      '#0.05 -0.07 -0.18 0.37 2.25 -0.75 0.49',
+      '#0.0 1.14 -0.38 -0.43 -0.32 1.07 0.57',
+      '#0.9 0.9 1.27 -0.09 -0.53 -0.27 0.48',
+      '#-0.35 -1.77 0.0 -0.21 -0.21 0.52 -0.45',
+      '#-0.31 1.26 -0.94 0.69 0.0 -1.22 0.35',
+      '#-0.32 0.26 0.91 -2.0 2.0 1.0 -0.62 -0.94',
+      '#0.0 0.0 -0.0 -0.8 -0.8 -1.13 0.64',
+      '#0.21 0.21 1.16 0.0 0.89 -0.45 -0.0 -0.0',
+      '#0.5 1.25 -1.74 0.44 0.0 -0.67 -1.53',
+      
+    ];
+
     var startingColorCode = "rgb(146, 151, 66)";
 
-    var totalModels = 1;
+    var totalModels = 20;
 
-    var startingHeight = 14;
-    var minHeight = 12;
-    var maxHeight = 18;
+    var startingHeight = 18;
+    var minHeight = 17;
+    var maxHeight = 20;
 
     var currentColorCode = startingColorCode;
     var currentModelNum = 0;
@@ -48,8 +74,6 @@ $(document).ready(function() {
         makeUIClick($(b));
     });
 
-    $("#front").attr("set_bind", "true");
-
 
     $("#main3d-dev").on('mousewheel', function(event) {
         var baba = 0;
@@ -57,14 +81,17 @@ $(document).ready(function() {
         event.preventDefault();
     });
 
-    $("#randomizeButton").click(function() {
+    $(".randomizeButton").click(function() {
         randomize();
     });
+
+    /*
     $("#orderButton").click(function(){
 
-      window.open('mailto:hills.jon@gmail.com?subject=[rnd] End table order&body=I used a form on rnd.com to order an end table! It\'s table #'+currentModelNum+' at a height of '+$('#colorslider').val() + " inches.%0D%0A%0D%0AFeel free to fill in a message here, as well as add any relevant information.");
+      window.open('mailto:hills.jon@gmail.com?subject=[rnd] End table order&body=I used a form on rnd.com to order an end table! It\'s table '+idToString[currentModelNum]+' at a height of '+$('#colorslider').val() + " inches, using color " +currentColorCode+ ".%0D%0A%0D%0AFeel free to fill in a message here, as well as add any relevant information.");
     });
-
+    */
+    $("#threedidentifier").find("h2").text(idToString[currentModelNum]);
 
 
     function setInlineLoadedInterval() {
@@ -74,7 +101,9 @@ $(document).ready(function() {
 
             clearInterval(intervalID);
             setColors(currentColorCode);
-
+            setHeight();
+            $("#front").attr("set_bind", "true");
+            
         }, 10);
     }
 
@@ -139,6 +168,9 @@ $(document).ready(function() {
         var widthRatio = 1 / heightRatio;
         smImage.css("background-size", (50 * widthRatio) + "% 100%");
         smImage.css("left", (50 - 50 * widthRatio) + "%");
+
+        $("#sm-height-text").text(setHeight + " inches");
+        $("#height-text").text(setHeight+" inches");
     }
 
 
@@ -177,9 +209,11 @@ $(document).ready(function() {
         var modelNumber = Math.floor(Math.random() * totalModels);
         currentModelNum=modelNumber;
         var modelPath = "models/tables/endTable" + modelNumber + ".x3d";
-        var img0path = "url(images/tables/endTable" + modelNumber + "-0.jpg)";
-        var img1path = "url(images/tables/endTable" + modelNumber + "-1.jpg)";
+        var img0path = "url(images/tables/endTable" + modelNumber + "-0.png)";
+        var img1path = "url(images/tables/endTable" + modelNumber + "-1.png)";
         
+        $("#threedidentifier").find("h2").text(idToString[currentModelNum]);
+
         var color = Math.floor(Math.random() * colorBlocks.length);
         colorBlocks.removeClass("selected");
         var code = $(colorBlocks[color]).attr("data-ui-color-code");
@@ -193,6 +227,7 @@ $(document).ready(function() {
         $(".smallImage1").css("background-image", img0path);
         $(".smallImage2").css("background-image", img1path);
         setInlineLoadedInterval();
+
     }
 
 
