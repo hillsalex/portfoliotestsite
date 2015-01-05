@@ -230,7 +230,9 @@ $(document).ready(function() {
 
     }
 
-
+    randomize();
     setColors(startingColorCode);
     setInlineLoadedInterval();
+    var rotString = "1 5 1 " + (Math.random()*0.9+0.1);
+    $("transform[rotation]").attr("rotation",rotString);
 });
