@@ -19,15 +19,15 @@ $bodyContainerWidth:1281px;
 $bodyContainerHeight:718px;
 $md-bodyContainerHeight:600px;
 $bodyContainerPadding:40px;
-$bgcolor:rgb(232, 232, 232);
-$headerImage0:url("../images/headers/header0.jpg");
-$headerImage1:url("../images/headers/header1.jpg");
-$headerImage2:url("../images/headers/header2.jpg");
-$headerImage3:url("../images/headers/header3.jpg");
-$headerImage4:url("../images/headers/header4.jpg");
+$bgcolor:rgb(250, 250, 250);
+$headerImage0:url("../images/headers/header0.png");
+$headerImage1:url("../images/headers/header1.png");
+$headerImage2:url("../images/headers/header2.png");
+$headerImage3:url("../images/headers/header3.png");
+$headerImage4:url("../images/headers/header4.png");
 $mainPic:url("../images/tablechair.jpg");
-$comingSoonUrl80:url("../images/headers/header0.jpg");
-$comingSoonUrl50:url("../images/headers/header0.jpg");
+$comingSoonUrl80:url("../images/headers/header5.png");
+$comingSoonUrl50:url("../images/headers/header6.png");
 body {
     color: $dkgray;
     font-family: 'Quicksand', 'Roboto', sans-serif;
@@ -38,7 +38,7 @@ body {
 .bodyContainer {
     width: $bodyContainerWidth;
     height: $bodyContainerHeight;
-    padding: 40px;
+    padding: 10px;
     background-color: $transparentColor;
 }
 @media (max-width: 1280px) {
@@ -179,7 +179,7 @@ header, .menuHolder {
 .menuHolder>div {
     float: left;
 }
-$selectionIndicatorHeight:8px;
+$selectionIndicatorHeight:4px;
 .selectionIndicator {
     width: 90%;
     height: $selectionIndicatorHeight;
@@ -191,7 +191,7 @@ $selectionIndicatorHeight:8px;
     bottom: 0px;
     left: 0px;
     border-radius: $selectionIndicatorHeight/2;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .1);
 }
 .selectionIndicator.selected {
     background-color: $greencolor;
@@ -662,7 +662,7 @@ $selectionIndicatorHeight:8px;
     width: 200%;
     left: 0%;
     height: 100%;
-    background-image: url("../images/tables/endTable0-0.png");
+    background-image: url("../images/tables/endTable2-0.png");
     background-size: 50% 100%;
     position: relative;
     background-repeat: no-repeat;
@@ -682,7 +682,7 @@ $selectionIndicatorHeight:8px;
     border-top: 0px;
     border-left: 0px;
     background-size: cover;
-    background-image: url("../images/tables/endTable0-1.png");
+    background-image: url("../images/tables/endTable2-1.png");
 }
 .brand {
     font-family: 'Quicksand', 'Roboto', sans-serif;
@@ -797,6 +797,7 @@ $selectionIndicatorHeight:8px;
     }
 }
 section, footer {
+
     .buttonHolder {
         position: relative;
         top: 32px;
@@ -817,7 +818,16 @@ section, footer {
         font-style: normal;
         -webkit-font-smoothing: antialiased;
         outline: none;
+        
     }
+    .randomizeButton:focus {
+        outline:none;
+    }
+
+    .randomizeButton:active {
+        outline:none;
+    }
+
     .bg-centerer {
         width: 100%;
         position: absolute;
@@ -847,7 +857,10 @@ section, footer {
         margin: 0px auto;
         display: block;
         position: relative;
+
     }
+
+
     .centerer {
         display: block;
         width: 0px;
@@ -1041,7 +1054,7 @@ section, footer {
     bottom: 10px;
     right: 10px;
     h2 {
-        font-size: $font-size-large;
+        font-size: $font-size-small;
     }
     z-index:100;
 }
