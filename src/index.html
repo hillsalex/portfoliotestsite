@@ -127,9 +127,15 @@
                             <!--right, up, towards camera -->
                             <transform translation="5 -4 -15">
                                 <!--<transform rotation="1 0 0 .4">-->
-                                    <transform rotation="1 5 1 .9">
+                                    <transform rotation="1 7 1 .9">
+                                        
+                                        
+                                    <!--Don't change the next two lines-->
                                         <transform id="verticalScale" scale="1 1 1">
-                                            <inline url="models/tables/endTable1.x3d" nameSpaceName=""></inline>
+                                            <transform id="yRotation" rotation="0 1 0 1">
+
+                                                <inline url="models/tables/endTable1.x3d" nameSpaceName=""></inline>
+                                            </transform>
                                         </transform>
                                     </transform>
                                 <!--</transform>-->
