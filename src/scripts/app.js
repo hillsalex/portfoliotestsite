@@ -199,6 +199,8 @@ $(document).ready(function() {
         $("#colorslider").val(newVal);
 
         getNewModel();
+        var rotString = "0 1 0 " + (Math.random()*2-1);
+        $("#yRotation").attr("rotation",rotString);
 
 
         setHeight();
@@ -230,7 +232,7 @@ $(document).ready(function() {
 
     }
 
-
+    randomize();
     setColors(startingColorCode);
     setInlineLoadedInterval();
 });
