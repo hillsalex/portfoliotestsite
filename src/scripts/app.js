@@ -2,6 +2,13 @@ $(document).ready(function() {
 
 
 
+    var colorsToString = {
+        'rgb(146, 151, 66)':'pantone 123',
+        'rgb(227,226,184)':'pantone 154',
+        'rgb(145,178,196)':'pantone 666',
+        'rgb(235,55,0)':'pantone 377'
+    };
+
     var idToString = [
         '#0.72 0.0 1.43 -0.8 0.0 0.0 0.0 -0.13',
         '#0.66 0.22 1.66 0.08 -0.12 0.58 0.96',
@@ -162,7 +169,7 @@ $(document).ready(function() {
         changeModelMaterial(Number(pieces[0]) / 255, Number(pieces[1]) / 255, Number(pieces[2]) / 255);
         $(".noUi-handle").css("background-color", code);
         $(".noUi-target").css("background-color", code);
-
+        $("#color-description").text(colorsToString[code]);
     }
 
     function makeUIClick(elt) {
